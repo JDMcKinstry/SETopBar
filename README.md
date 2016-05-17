@@ -14,7 +14,7 @@ Click the button "Load Unpacked Extensions" and go to wherever you saved the "SE
 Enjoy!
 ---
 
-Oh, and in case you're wondering, the Base64 encoded code that's injected on Stack Exchange sites is the following (you can reverse the b64 text nd see for yourself if you still don't trust me. I wouldn't :P)
+Oh, and in case you're wondering, the Base64 encoded code that's injected on Stack Exchange sites is the following ( <sub> you can reverse the b64 text nd see for yourself if you still don't trust me. I wouldn't :P </sub> )
 
 	;(function($) {
 		function z() {
