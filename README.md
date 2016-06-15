@@ -17,16 +17,13 @@ Enjoy!
 Oh, and in case you're wondering, the Base64 encoded code that's injected on Stack Exchange sites is the following ( <sub> you can reverse the b64 text nd see for yourself if you still don't trust me. I wouldn't :P </sub> )
 
 	;(function($) {
-		function z() {
+		function z(unDock) {
 			var a = $(window).scrollTop(),
-			b = $(".topbar").height();
-			a > b ? ($(".topbar").css({ position: "fixed", top: 0, "z-index": 999 }), $("body > .container").css({ "margin-top": b })) 
-				: ($(".topbar").css({ position: "", top: "", "z-index": "" }), $("body > .container").css({ "margin-top": "" }))
+				b = $(".topbar").height();
+			a > b && !unDock ? ($(".topbar").css({ position: "fixed", top: 0, "z-index": 999 }), $("body > .container").css({ "margin-top": b })) : ($(".topbar").css({ position: "", top: "", "z-index": "" }), $("body > .container").css({ "margin-top": "" }))
 		}
 		if (document.readyState == "complete") z();
 		else window.onload = z;
-		$(window).on("scroll", function(a) {
-			this.tmr && clearTimeout(this.tmr);
-			this.tmr = setTimeout(z, 10)
-		});
+		$(window).on("scroll", function(a) { this.tmr && clearTimeout(this.tmr); this.tmr = setTimeout(z, 10); }).trigger("scroll");
+		$(document).on("click", ".popout, .popin", function(e) { z($(this).hasClass("popout")); });
 	})(jQuery);
