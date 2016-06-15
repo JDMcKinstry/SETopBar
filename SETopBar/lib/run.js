@@ -1,16 +1,16 @@
 ;(function() {
 	/**	myB64 : Raw JS
 	 *	;(function($) {
-		function z(unDock) {
-			var a = $(window).scrollTop(),
-				b = $(".topbar").height();
-			a > b && !unDock ? ($(".topbar").css({ position: "fixed", top: 0, "z-index": 999 }), $("body > .container").css({ "margin-top": b })) : ($(".topbar").css({ position: "", top: "", "z-index": "" }), $("body > .container").css({ "margin-top": "" }))
-		}
-		if (document.readyState == "complete") z();
-		else window.onload = z;
-		$(window).on("scroll", function(a) { this.tmr && clearTimeout(this.tmr); this.tmr = setTimeout(z, 10); }).trigger("scroll");
-		$(document).on("click", ".popout, .popin", function(e) { z($(this).hasClass("popout")); });
-	})(jQuery);
+	 *		function z(unDock) {
+	 *			var a = $(window).scrollTop(),
+	 *				b = $(".topbar").height();
+	 *			a > b && !unDock ? ($(".topbar").css({ position: "fixed", top: 0, "z-index": 999 }), $("body > .container").css({ "margin-top": b })) : ($(".topbar").css({ position: "", top: "", "z-index": "" }), $("body > .container").css({ "margin-top": "" }))
+	 *		}
+	 *		if (document.readyState == "complete") z();
+	 *		else window.onload = z;
+	 *		$(window).on("scroll", function(a) { this.tmr && clearTimeout(this.tmr); this.tmr = setTimeout(z, 10); }).trigger("scroll");
+	 *		$(document).on("click", ".popout, .popin", function(e) { z($(this).hasClass("popout")); });
+	 *	})(jQuery);
 	 *	*/
 	var myB64 = "OyhmdW5jdGlvbigkKXtmdW5jdGlvbiBhKGEpe3ZhciBkPSQod2luZG93KS5zY3JvbGxUb3AoKSxiPSQoIi50b3BiYXIiKS5oZWlnaHQoKTtkPmImJiFhPygkKCIudG9wYmFyIikuY3NzKHtwb3NpdGlvbjoiZml4ZWQiLHRvcDowLCJ6LWluZGV4Ijo5OTl9KSwkKCJib2R5ID4gLmNvbnRhaW5lciIpLmNzcyh7Im1hcmdpbi10b3AiOmJ9KSk6KCQoIi50b3BiYXIiKS5jc3Moe3Bvc2l0aW9uOiIiLHRvcDoiIiwiei1pbmRleCI6IiJ9KSwkKCJib2R5ID4gLmNvbnRhaW5lciIpLmNzcyh7Im1hcmdpbi10b3AiOiIifSkpfSJjb21wbGV0ZSI9PWRvY3VtZW50LnJlYWR5U3RhdGU/c2V0VGltZW91dChhLDEwMCk6d2luZG93Lm9ubG9hZD1zZXRUaW1lb3V0KGEsMTAwKTskKHdpbmRvdykub24oInNjcm9sbCIsZnVuY3Rpb24oYyl7dGhpcy50bXImJmNsZWFyVGltZW91dCh0aGlzLnRtcik7dGhpcy50bXI9c2V0VGltZW91dChhLDEwKX0pOyQoZG9jdW1lbnQpLm9uKCJjbGljayIsIi5wb3BvdXQsIC5wb3BpbiIsZnVuY3Rpb24oYyl7YSgkKHRoaXMpLmhhc0NsYXNzKCJwb3BvdXQiKSl9KX0pKGpRdWVyeSk7",
 		myStacksB64 = "data:text/javascript;base64,"+myB64,
